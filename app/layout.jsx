@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
+import AuthProvider from '@/components/AuthProvider';
 import '@/assets/styles/globals.css';
 
 export const metadata = {
@@ -10,12 +11,14 @@ export const metadata = {
 
 const MainLayout = ({ children }) => {
   return (
-    <html lang="en">
-      <body>
-        <Navbar />
-        <main>{children}</main>
-      </body>
-    </html>
+    <AuthProvider>
+      <html lang="en">
+        <body>
+          <Navbar />
+          <main>{children}</main>
+        </body>
+      </html>
+    </AuthProvider>
   );
 };
 

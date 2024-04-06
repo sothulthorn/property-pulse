@@ -3,7 +3,7 @@ import InfoBoxes from '@/components/InfoBoxes';
 import Footer from '@/components/Footer';
 import HomeProperty from '@/components/HomeProperty';
 
-const HomePage = () => {
+const HomePage = async () => {
   return (
     <>
       <Hero />

@@ -36,8 +36,7 @@ async function fetchProperty(id) {
       throw new Error('Failed to fetch data');
     }
 
-    const data = await res.json();
-    return data.message;
+    return await res.json();
   } catch (error) {
     console.error('Error fetching property:', error);
     return null;

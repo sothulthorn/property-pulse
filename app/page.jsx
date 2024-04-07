@@ -9,7 +9,6 @@ const HomePage = async () => {
       <Hero />
       <InfoBoxes />
       <HomeProperty />
-      <Footer />
     </>
   );
 };

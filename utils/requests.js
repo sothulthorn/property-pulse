@@ -8,14 +8,15 @@ async function fetchProperties() {
       return [];
     }
 
-    const res = await fetch(`${apiDomain}/properties`);
+    const res = await fetch(`${apiDomain}/properties`, {
+      cache: 'no-store',
+    });
 
     if (!res.ok) {
       throw new Error('Failed to fetch data');
     }
 
-    const data = await res.json();
-    return data.message;
+    return res.json();
   } catch (error) {
     console.error('Error fetching properties:', error);
     return [];

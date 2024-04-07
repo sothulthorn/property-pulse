@@ -130,6 +130,7 @@ const PropertyEditForm = () => {
 
       if (res.status === 200) {
         router.push(`/properties/${id}`);
+        toast.success('Property Updated');
       } else if (res.status === 401 || res.status === 403) {
         toast.error('Permission denied');
       } else {

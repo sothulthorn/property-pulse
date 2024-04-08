@@ -30,7 +30,7 @@ export const GET = async (request) => {
       query.type = typePattern;
     }
 
-    const properties = await Property.find(query);
+    const properties = await Property.find({ query });
 
     return new Response(JSON.stringify(properties, { status: 200 }));
   } catch (error) {

@@ -24,19 +24,19 @@ export const GET = async (request) => {
       ],
     };
 
-    // Only check for property if it's not 'All'
+    // Only check for property if its not 'All'
     if (propertyType && propertyType !== 'All') {
       const typePattern = new RegExp(propertyType, 'i');
       query.type = typePattern;
     }
 
-    const properties = await Property.find({ query });
+    const properties = await Property.find(query);
 
-    return new Response(JSON.stringify(properties, { status: 200 }));
+    return new Response(JSON.stringify(properties), {
+      status: 200,
+    });
   } catch (error) {
     console.log(error);
-    return new Response(
-      JSON.stringify('Something went wrong', { status: 500 })
-    );
+    return new Response('Something went wrong', { status: 500 });
   }
 };

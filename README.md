@@ -57,7 +57,7 @@ Make sure you have the following software installed on your system:
 1. Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/sothulthorn/nextjs-dev-overflow
+git clone https://github.com/sothulthorn/property-pulse.git
 ```
 
 2. Create a `.env` file:
